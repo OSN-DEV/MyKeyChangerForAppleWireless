@@ -165,6 +165,7 @@ namespace MyKeyChangerForAppleWireless {
         private static Dictionary<byte, KeySet> _convertMappingUser1 = new Dictionary<byte, KeySet> {
             { ScanCode.F14, new KeySet(KeySetPair.Kanji) },
 
+            { ScanCode.Z, new KeySet(KeySetPair.Num3) },
             { ScanCode.X, new KeySet(KeySetPair.Minus) },
             { ScanCode.C, new KeySet(KeySetPair.Colon) },
             { ScanCode.N, new KeySet(KeySetPair.Delete) },

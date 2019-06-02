@@ -17,7 +17,7 @@ Apple Wireless Keyboardのキーマッピング変更ツール。Planckキーボ
 
 ## キーマッピング
 ![00_base](https://user-images.githubusercontent.com/31182578/58758730-89fb2800-855a-11e9-8674-c57ec695581d.jpg)
-![01_User1](https://user-images.githubusercontent.com/31182578/58758734-a26b4280-855a-11e9-88d5-55af395a8887.jpg)
+![01_User1](https://user-images.githubusercontent.com/31182578/58760371-c4bc8a80-8571-11e9-81d5-0902c9e3d584.jpg)
 ![02_User2](https://user-images.githubusercontent.com/31182578/58758737-ab5c1400-855a-11e9-88c1-d0b005b2a04c.jpg)
 ![03_User3](https://user-images.githubusercontent.com/31182578/58758738-b2832200-855a-11e9-8897-74a98778b2fe.jpg)
 
@@ -27,3 +27,6 @@ Apple Wireless Keyboardのキーマッピング変更ツール。Planckキーボ
 * 十分なデバッグは行っていないので予期せぬ動作を起こす可能性があります。
 * Altとの組み合わせ(例えばAlt + F4)が動作しないことを確認しています(ファンクションキーにマッピングしたキーを使用した場合の話です)。
 
+## 更新履歴
+### 2019.06.02
+英数 + Shift + E が認識しないので(理由は不明)、英数 + Z のアサインを変更。

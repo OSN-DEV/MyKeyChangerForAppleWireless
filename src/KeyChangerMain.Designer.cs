@@ -39,7 +39,7 @@
             // 
             this.cNotify.ContextMenuStrip = this.cAppMenu;
             this.cNotify.Icon = ((System.Drawing.Icon)(resources.GetObject("cNotify.Icon")));
-            this.cNotify.Text = "notifyIcon1";
+            this.cNotify.Text = "MyKeyChanger";
             this.cNotify.Visible = true;
             // 
             // cAppMenu
