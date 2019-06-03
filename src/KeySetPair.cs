@@ -197,6 +197,7 @@ namespace MyKeyChangerForAppleWireless {
         public static byte E { get { return KeySetPair.ScanCode(KeySetPair.E); } }
         public static byte F { get { return KeySetPair.ScanCode(KeySetPair.F); } }
         public static byte G { get { return KeySetPair.ScanCode(KeySetPair.G); } }
+        public static byte H { get { return KeySetPair.ScanCode(KeySetPair.H); } }
         public static byte I { get { return KeySetPair.ScanCode(KeySetPair.I); } }
         public static byte J { get { return KeySetPair.ScanCode(KeySetPair.J); } }
         public static byte K { get { return KeySetPair.ScanCode(KeySetPair.K); } }

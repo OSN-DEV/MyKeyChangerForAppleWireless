@@ -17,7 +17,7 @@ Apple Wireless Keyboardのキーマッピング変更ツール。Planckキーボ
 
 ## キーマッピング
 ![00_base](https://user-images.githubusercontent.com/31182578/58758730-89fb2800-855a-11e9-8674-c57ec695581d.jpg)
-![01_User1](https://user-images.githubusercontent.com/31182578/58760371-c4bc8a80-8571-11e9-81d5-0902c9e3d584.jpg)
+![01_User1](https://user-images.githubusercontent.com/31182578/58805924-0459a400-8650-11e9-93b3-7c3915073cd8.jpg)
 ![02_User2](https://user-images.githubusercontent.com/31182578/58758737-ab5c1400-855a-11e9-88c1-d0b005b2a04c.jpg)
 ![03_User3](https://user-images.githubusercontent.com/31182578/58758738-b2832200-855a-11e9-8897-74a98778b2fe.jpg)
 
