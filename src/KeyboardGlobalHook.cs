@@ -200,10 +200,10 @@ namespace MyKeyChangerForAppleWireless {
         private static Dictionary<byte, KeySet> _convertMappingUser2 = new Dictionary<byte, KeySet> {
             { ScanCode.X, new KeySet(KeySetPair.Minus) },
             { ScanCode.C, new KeySet(KeySetPair.Colon) },
-            { ScanCode.M, new KeySet(KeySetPair.Left) },
-            { ScanCode.LessThan, new KeySet(KeySetPair.Down) },
-            { ScanCode.GreaterThan, new KeySet(KeySetPair.Up) },
-            { ScanCode.Slash, new KeySet(KeySetPair.Right) },
+            { ScanCode.M, new KeySet(KeySetPair.Left, Flags.ExtendeKey) },
+            { ScanCode.LessThan, new KeySet(KeySetPair.Down, Flags.ExtendeKey) },
+            { ScanCode.GreaterThan, new KeySet(KeySetPair.Up, Flags.ExtendeKey) },
+            { ScanCode.Slash, new KeySet(KeySetPair.Right, Flags.ExtendeKey) },
 
             { ScanCode.A, new KeySet(KeySetPair.F11) },
             { ScanCode.S, new KeySet(KeySetPair.F12) },
