@@ -318,13 +318,15 @@ namespace MyKeyChangerForAppleWireless {
         private static IntPtr HookProcedure(int code, uint msg, ref KBDLLHOOKSTRUCT hookData) {
             byte scanCode = (byte)hookData.scanCode;
 
-            System.Diagnostics.Debug.Print("### scanCode:" + scanCode.ToString("x4"));
-            System.Diagnostics.Debug.Print("### hookData.dwExtraInfo:" + hookData.dwExtraInfo.ToString("x4"));
-            System.Diagnostics.Debug.Print("### msg:" + msg.ToString("x4"));
-            System.Diagnostics.Debug.Print("### code:" + code.ToString("x4"));
-            System.Diagnostics.Debug.Print("### _modified:" + _modified);
+            //System.Diagnostics.Debug.Print("### scanCode:" + scanCode.ToString("x4"));
+            //System.Diagnostics.Debug.Print("### hookData.dwExtraInfo:" + hookData.dwExtraInfo.ToString("x4"));
+            //System.Diagnostics.Debug.Print("### msg:" + msg.ToString("x4"));
+            //System.Diagnostics.Debug.Print("### code:" + code.ToString("x4"));
+            //System.Diagnostics.Debug.Print("### _modified:" + _modified);
 
+            System.Diagnostics.Debug.Print("### 001:" + scanCode.ToString("x4"));
             if (Const.Action != code || (IntPtr)ExtraInfo.SendKey == hookData.dwExtraInfo) {
+                System.Diagnostics.Debug.Print("### 002:" + scanCode.ToString("x4"));
                 goto ExitProc;
             }
 
@@ -335,13 +337,16 @@ namespace MyKeyChangerForAppleWireless {
                 } else {
                     _modified = ModifiedKey.None;
                 }
+                System.Diagnostics.Debug.Print("### 003:" + scanCode.ToString("x4"));
                 return (IntPtr)1;
             }
             if (ModifiedKey.None == _modified) {
                 if (_normalConvert.ContainsKey(scanCode)) {
                     SendKey(keyStroke, _normalConvert[scanCode]);
+                    System.Diagnostics.Debug.Print("### 004:" + scanCode.ToString("x4"));
                     return (IntPtr)1;
                 }
+                System.Diagnostics.Debug.Print("### 005:" + scanCode.ToString("x4"));
                 goto ExitProc;
             }
 
@@ -349,10 +354,12 @@ namespace MyKeyChangerForAppleWireless {
             
             if (mappingData.ContainsKey(scanCode)) {
                 SendKey(keyStroke, mappingData[scanCode]);
+                System.Diagnostics.Debug.Print("### 006:" + scanCode.ToString("x4"));
                 return (IntPtr)1;
             }
 
         ExitProc:
+            System.Diagnostics.Debug.Print("### 007:" + scanCode.ToString("x4"));
             return NativeMethods.CallNextHookEx(_keyEventHandle, code, msg, ref hookData);
         }
 
