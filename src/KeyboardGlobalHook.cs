@@ -210,6 +210,7 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.S, new KeySet(KeySetPair.F12) },
             { ScanCode.D, new KeySet(KeySetPair.Minus) },
             { ScanCode.F, new KeySet(KeySetPair.Colon) },
+            { ScanCode.G, new KeySet(KeySetPair.Slash) },
             { ScanCode.K, new KeySet(KeySetPair.PrintScreen) },
             { ScanCode.L, new KeySet(KeySetPair.ScrollLock) },
             { ScanCode.SemiColon, new KeySet(KeySetPair.Pause) },
@@ -248,7 +249,6 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.Colon, new KeySet(KeySetPair.Minus) },
             { ScanCode.F13, new KeySet(KeySetPair.Tab) },
             { ScanCode.Tab, new KeySet(KeySetPair.Escape) },
-            { ScanCode.BracketsR, new KeySet(KeySetPair.Slash) },
         };
 
         private static Dictionary<int, Dictionary<byte, KeySet>> _convertMappingList = new Dictionary<int, Dictionary<byte, KeySet>> {
