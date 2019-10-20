@@ -178,6 +178,7 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.S, new KeySet(KeySetPair.Underscore) },
             { ScanCode.D, new KeySet(KeySetPair.BracketsR) },
             { ScanCode.F, new KeySet(KeySetPair.Yen) },
+            { ScanCode.G, new KeySet(KeySetPair.Slash) },
             { ScanCode.H, new KeySet(KeySetPair.Kanji) },
             { ScanCode.J, new KeySet(KeySetPair.Home, Flags.ExtendeKey) },
             { ScanCode.K, new KeySet(KeySetPair.End, Flags.ExtendeKey) },
