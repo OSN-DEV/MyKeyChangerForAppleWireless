@@ -260,6 +260,7 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.E, new KeySet("ぶ") },
             { ScanCode.R, new KeySet("ず") },
             { ScanCode.T, new KeySet("が") },
+            { ScanCode.Y, new KeySet("げ") },
             { ScanCode.P, new KeySet("ぜ") },
 
             { ScanCode.A, new KeySet("ぢ") },
