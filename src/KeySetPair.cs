@@ -192,6 +192,7 @@ namespace MyKeyChangerForAppleWireless {
 
         // Alpha
         public static byte A { get { return KeySetPair.ScanCode(KeySetPair.A); } }
+        public static byte B { get { return KeySetPair.ScanCode(KeySetPair.B); } }
         public static byte C { get { return KeySetPair.ScanCode(KeySetPair.C); } }
         public static byte D { get { return KeySetPair.ScanCode(KeySetPair.D); } }
         public static byte E { get { return KeySetPair.ScanCode(KeySetPair.E); } }
@@ -221,6 +222,7 @@ namespace MyKeyChangerForAppleWireless {
         // Others
         public static byte AtMark { get { return KeySetPair.ScanCode(KeySetPair.AtMark); } }
         public static byte BackSpace { get { return KeySetPair.ScanCode(KeySetPair.BackSpace); } }
+        public static byte BracketsL { get { return KeySetPair.ScanCode(KeySetPair.BracketsL); } }
         public static byte BracketsR { get { return KeySetPair.ScanCode(KeySetPair.BracketsR); } }
         public static byte CapsLock { get { return KeySetPair.ScanCode(KeySetPair.CapsLock); } }
         public static byte Caret { get { return KeySetPair.ScanCode(KeySetPair.Caret); } }

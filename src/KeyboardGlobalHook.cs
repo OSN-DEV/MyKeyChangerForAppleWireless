@@ -137,6 +137,7 @@ namespace MyKeyChangerForAppleWireless {
             public short VirtualKey;
             public ushort ScanCode;
             public int Flag;
+            public string value = "";
             public KeySet(byte[] pair) : this(pair, Flags.None) {
             }
             public KeySet(byte[] pair, int flag) {
@@ -144,12 +145,19 @@ namespace MyKeyChangerForAppleWireless {
                 this.ScanCode = KeySetPair.ScanCode(pair);
                 this.Flag = flag;
             }
+            public KeySet(String value) {
+                this.value = value;
+                this.ScanCode = value[0];
+                this.Flag = Flags.Unicode;
+            }
         }
         private static class ModifiedKey {
             public const int None = 0x00;
             public const int User1 = 0x01 << 1;
             public const int User2 = 0x01 << 2;
             public const int User3 = 0x01 << 3;
+            public const int User4 = 0x01 << 4;
+            public const int User5 = 0x01 << 5;
         }
         private static int _modified = ModifiedKey.None;
 
@@ -158,6 +166,8 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.Muhenkan, ModifiedKey.User1 },
             { ScanCode.F15, ModifiedKey.User2 },
             { ScanCode.AtMark, ModifiedKey.User3 },
+            { ScanCode.BracketsL, ModifiedKey.User4 },
+            { ScanCode.BracketsR, ModifiedKey.User5 },
         };
 
 
@@ -243,6 +253,42 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.G, new KeySet(KeySetPair.Underscore) },
         };
 
+        // User4([)
+        private static Dictionary<byte, KeySet> _convertMappingUser4 = new Dictionary<byte, KeySet> {
+            { ScanCode.Q, new KeySet("だ") },
+            { ScanCode.W, new KeySet("で") },
+            { ScanCode.E, new KeySet("ぶ") },
+            { ScanCode.R, new KeySet("ず") },
+            { ScanCode.T, new KeySet("が") },
+            { ScanCode.P, new KeySet("ぜ") },
+
+            { ScanCode.A, new KeySet("ぢ") },
+            { ScanCode.S, new KeySet("ど") },
+            { ScanCode.D, new KeySet("じ") },
+            { ScanCode.F, new KeySet("ば") },
+            { ScanCode.G, new KeySet("ぎ") },
+            { ScanCode.H, new KeySet("ぐ") },
+            { ScanCode.L, new KeySet("べ") },
+            { ScanCode.SemiColon, new KeySet("ぼ") },
+
+            { ScanCode.Z, new KeySet("づ") },
+            { ScanCode.X, new KeySet("ざ") },
+            { ScanCode.C, new KeySet("ぞ") },
+            { ScanCode.V, new KeySet("び") },
+            { ScanCode.B, new KeySet("ご") },
+        };
+
+        // User5(])
+        private static Dictionary<byte, KeySet> _convertMappingUser5 = new Dictionary<byte, KeySet> {
+            { ScanCode.E, new KeySet("ぷ") },
+
+            { ScanCode.F, new KeySet("ぱ") },
+            { ScanCode.L, new KeySet("ぺ") },
+            { ScanCode.SemiColon, new KeySet("ぽ") },
+
+            { ScanCode.V, new KeySet("ぴ") },
+        };
+
         // single
         private static Dictionary<ushort, KeySet> _normalConvert = new Dictionary<ushort, KeySet> {
             { ScanCode.F14, new KeySet(KeySetPair.Kana) },
@@ -256,6 +302,8 @@ namespace MyKeyChangerForAppleWireless {
             { ModifiedKey.User1, _convertMappingUser1},
             { ModifiedKey.User2, _convertMappingUser2},
             { ModifiedKey.User3, _convertMappingUser3},
+            { ModifiedKey.User4, _convertMappingUser4},
+            { ModifiedKey.User5, _convertMappingUser5},
         };
         #endregion
 
@@ -382,8 +430,13 @@ namespace MyKeyChangerForAppleWireless {
             input.Keyboard.Time = 0;
             input.Keyboard.ExtraInfo = ExtraInfo.SendKey;
             Input[] inputs = { input };
-            NativeMethods.SendInput(inputs.Length, inputs, System.Runtime.InteropServices.Marshal.SizeOf(inputs[0]));
+            //if (Flags.Unicode != keyset.Flag) {
+                NativeMethods.SendInput(inputs.Length, inputs, System.Runtime.InteropServices.Marshal.SizeOf(inputs[0]));
+
         }
+
         #endregion
+
+
     }
 }

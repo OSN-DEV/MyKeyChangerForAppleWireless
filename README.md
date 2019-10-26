@@ -16,10 +16,12 @@ Apple Wireless Keyboardのキーマッピング変更ツール。Planckキーボ
 
 
 ## キーマッピング
-![00_base](https://user-images.githubusercontent.com/31182578/58758730-89fb2800-855a-11e9-8674-c57ec695581d.jpg)
-![01_User1](https://user-images.githubusercontent.com/31182578/58805924-0459a400-8650-11e9-93b3-7c3915073cd8.jpg)
-![02_User2](https://github.com/OSN-DEV/MyKeyChangerForAppleWireless/blob/master/doc/keymaping/02_User2.jpg)
-![03_User3](https://user-images.githubusercontent.com/31182578/58758738-b2832200-855a-11e9-8897-74a98778b2fe.jpg)
+![00_base](https://github.com/OSN-DEV/MyKeyChangerForAppleWireless/blob/master/doc/keymaping/00_base.jpg?raw=true)
+![01_User1](https://github.com/OSN-DEV/MyKeyChangerForAppleWireless/blob/master/doc/keymaping/01_User1.jpg?raw=true)
+![02_User2](https://github.com/OSN-DEV/MyKeyChangerForAppleWireless/blob/master/doc/keymaping/02_User2.jpg?raw=true)
+![03_User3](https://github.com/OSN-DEV/MyKeyChangerForAppleWireless/blob/master/doc/keymaping/03_User3.jpg?raw=true)
+![04_User4](https://github.com/OSN-DEV/MyKeyChangerForAppleWireless/blob/master/doc/keymaping/04_User4.jpg?raw=true)
+![05_User5](https://github.com/OSN-DEV/MyKeyChangerForAppleWireless/blob/master/doc/keymaping/05_User5.jpg?raw=true)
 
 
 ## 制限
