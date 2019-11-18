@@ -56,6 +56,7 @@ namespace MyKeyChangerForAppleWireless {
         public readonly static byte[] F13 = { 0x7C, 0x64 };
         public readonly static byte[] F14 = { 0x7D, 0x65 };
         public readonly static byte[] F15 = { 0x7E, 0x66 };
+        public readonly static byte[] F16 = { 0x7F, 0x67 };
 
         // Number
         public readonly static byte[] Num0 = { 0x30, 0x0B };

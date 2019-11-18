@@ -291,7 +291,7 @@ namespace MyKeyChangerForAppleWireless {
         // single
         private static Dictionary<ushort, KeySet> _normalConvert = new Dictionary<ushort, KeySet> {
             { ScanCode.F14, new KeySet(KeySetPair.Kana) },
-            { ScanCode.Underscore, new KeySet(KeySetPair.Enter) },
+            { ScanCode.Underscore, new KeySet(KeySetPair.F16) },
             { ScanCode.Colon, new KeySet(KeySetPair.Minus) },
             { ScanCode.F13, new KeySet(KeySetPair.Tab) },
             { ScanCode.Tab, new KeySet(KeySetPair.Escape) },
