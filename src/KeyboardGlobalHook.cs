@@ -182,7 +182,7 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.M, new KeySet(KeySetPair.BackSpace) },
             { ScanCode.LessThan, new KeySet(KeySetPair.Insert) },
             { ScanCode.GreaterThan, new KeySet(KeySetPair.Tab) },
-            { ScanCode.Underscore, new KeySet(KeySetPair.PageDown, Flags.ExtendeKey) },
+            { ScanCode.Slash, new KeySet(KeySetPair.PageDown, Flags.ExtendeKey) },
             
             { ScanCode.A, new KeySet(KeySetPair.Caret) },
             { ScanCode.S, new KeySet(KeySetPair.Underscore) },
