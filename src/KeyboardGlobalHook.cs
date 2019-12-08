@@ -296,6 +296,7 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.F13, new KeySet(KeySetPair.Tab) },
             { ScanCode.Tab, new KeySet(KeySetPair.Escape) },
             { ScanCode.BracketsL, new KeySet(KeySetPair.WinR,Flags.ExtendeKey) },
+            { ScanCode.BracketsR, new KeySet(KeySetPair.AltL,Flags.ExtendeKey) },
         };
 
         private static Dictionary<int, Dictionary<byte, KeySet>> _convertMappingList = new Dictionary<int, Dictionary<byte, KeySet>> {
