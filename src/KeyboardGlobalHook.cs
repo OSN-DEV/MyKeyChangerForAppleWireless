@@ -156,8 +156,8 @@ namespace MyKeyChangerForAppleWireless {
             public const int User1 = 0x01 << 1;
             public const int User2 = 0x01 << 2;
             public const int User3 = 0x01 << 3;
-            public const int User4 = 0x01 << 4;
-            public const int User5 = 0x01 << 5;
+            //public const int User4 = 0x01 << 4;
+            //public const int User5 = 0x01 << 5;
         }
         private static int _modified = ModifiedKey.None;
 
@@ -166,8 +166,8 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.Muhenkan, ModifiedKey.User1 },
             { ScanCode.F15, ModifiedKey.User2 },
             { ScanCode.AtMark, ModifiedKey.User3 },
-            { ScanCode.BracketsL, ModifiedKey.User4 },
-            { ScanCode.BracketsR, ModifiedKey.User5 },
+            //{ ScanCode.BracketsL, ModifiedKey.User4 },
+            //{ ScanCode.BracketsR, ModifiedKey.User5 },
         };
 
 
@@ -295,14 +295,15 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.Colon, new KeySet(KeySetPair.Minus) },
             { ScanCode.F13, new KeySet(KeySetPair.Tab) },
             { ScanCode.Tab, new KeySet(KeySetPair.Escape) },
+            { ScanCode.BracketsL, new KeySet(KeySetPair.WinR,Flags.ExtendeKey) },
         };
 
         private static Dictionary<int, Dictionary<byte, KeySet>> _convertMappingList = new Dictionary<int, Dictionary<byte, KeySet>> {
             { ModifiedKey.User1, _convertMappingUser1},
             { ModifiedKey.User2, _convertMappingUser2},
             { ModifiedKey.User3, _convertMappingUser3},
-            { ModifiedKey.User4, _convertMappingUser4},
-            { ModifiedKey.User5, _convertMappingUser5},
+            //{ ModifiedKey.User4, _convertMappingUser4},
+            //{ ModifiedKey.User5, _convertMappingUser5},
         };
         #endregion
 
