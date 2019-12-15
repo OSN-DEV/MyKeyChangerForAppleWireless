@@ -289,15 +289,15 @@ namespace MyKeyChangerForAppleWireless {
         };
 
         // single
-        private static Dictionary<ushort, KeySet> _normalConvert = new Dictionary<ushort, KeySet> {
-            { ScanCode.F14, new KeySet(KeySetPair.Kana) },
-            { ScanCode.Underscore, new KeySet(KeySetPair.F16) },
-            { ScanCode.Colon, new KeySet(KeySetPair.Minus) },
-            { ScanCode.F13, new KeySet(KeySetPair.Tab) },
-            { ScanCode.Tab, new KeySet(KeySetPair.Escape) },
-            { ScanCode.BracketsL, new KeySet(KeySetPair.WinR,Flags.ExtendeKey) },
-            { ScanCode.BracketsR, new KeySet(KeySetPair.AltL,Flags.ExtendeKey) },
-        };
+        //private static Dictionary<ushort, KeySet> _normalConvert = new Dictionary<ushort, KeySet> {
+//            { ScanCode.F14, new KeySet(KeySetPair.Kana) },
+//            { ScanCode.Underscore, new KeySet(KeySetPair.F16) },
+            //{ ScanCode.Colon, new KeySet(KeySetPair.Minus) },
+            //{ ScanCode.F13, new KeySet(KeySetPair.Tab) },
+            //{ ScanCode.Tab, new KeySet(KeySetPair.Escape) },
+            //{ ScanCode.BracketsL, new KeySet(KeySetPair.WinR,Flags.ExtendeKey) },
+            //{ ScanCode.BracketsR, new KeySet(KeySetPair.AltL,Flags.ExtendeKey) },
+        //};
 
         private static Dictionary<int, Dictionary<byte, KeySet>> _convertMappingList = new Dictionary<int, Dictionary<byte, KeySet>> {
             { ModifiedKey.User1, _convertMappingUser1},
@@ -394,24 +394,24 @@ namespace MyKeyChangerForAppleWireless {
                 return (IntPtr)1;
             }
             if (ModifiedKey.None == _modified) {
-                if (_normalConvert.ContainsKey(scanCode)) {
-                    SendKey(keyStroke, _normalConvert[scanCode]);
-                    //System.Diagnostics.Debug.Print("### 004:" + scanCode.ToString("x4"));
-                    return (IntPtr)1;
-                }
+                //if (_normalConvert.ContainsKey(scanCode)) {
+                //    SendKey(keyStroke, _normalConvert[scanCode]);
+                //    //System.Diagnostics.Debug.Print("### 004:" + scanCode.ToString("x4"));
+                //    return (IntPtr)1;
+                //}
                 //System.Diagnostics.Debug.Print("### 005:" + scanCode.ToString("x4"));
                 goto ExitProc;
             }
 
             var mappingData = _convertMappingList[_modified];
-            
+
             if (mappingData.ContainsKey(scanCode)) {
                 SendKey(keyStroke, mappingData[scanCode]);
                 //System.Diagnostics.Debug.Print("### 006:" + scanCode.ToString("x4"));
                 return (IntPtr)1;
             }
 
-        ExitProc:
+            ExitProc:
             //System.Diagnostics.Debug.Print("### 007:" + scanCode.ToString("x4"));
             return NativeMethods.CallNextHookEx(_keyEventHandle, code, msg, ref hookData);
         }
