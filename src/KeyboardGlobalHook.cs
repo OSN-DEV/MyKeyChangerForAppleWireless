@@ -224,7 +224,7 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.K, new KeySet(KeySetPair.Left, Flags.ExtendeKey) },
             { ScanCode.L, new KeySet(KeySetPair.Down, Flags.ExtendeKey) },
             { ScanCode.SemiColon, new KeySet(KeySetPair.Up, Flags.ExtendeKey) },
-            { ScanCode.Colon, new KeySet(KeySetPair.Right, Flags.ExtendeKey) },
+            { ScanCode.Minus, new KeySet(KeySetPair.Right, Flags.ExtendeKey) },
             { ScanCode.Q, new KeySet(KeySetPair.F1) },
             { ScanCode.W, new KeySet(KeySetPair.F2) },
             { ScanCode.E, new KeySet(KeySetPair.F3) },
