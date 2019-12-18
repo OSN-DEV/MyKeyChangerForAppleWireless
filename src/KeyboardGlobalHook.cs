@@ -156,7 +156,7 @@ namespace MyKeyChangerForAppleWireless {
             public const int User1 = 0x01 << 1;
             public const int User2 = 0x01 << 2;
             public const int User3 = 0x01 << 3;
-            //public const int User4 = 0x01 << 4;
+            public const int User4 = 0x01 << 4;
             //public const int User5 = 0x01 << 5;
         }
         private static int _modified = ModifiedKey.None;
@@ -166,7 +166,7 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.Muhenkan, ModifiedKey.User1 },
             { ScanCode.F15, ModifiedKey.User2 },
             { ScanCode.AtMark, ModifiedKey.User3 },
-            //{ ScanCode.BracketsL, ModifiedKey.User4 },
+            { ScanCode.ShiftR, ModifiedKey.User4 },
             //{ ScanCode.BracketsR, ModifiedKey.User5 },
         };
 
@@ -250,60 +250,73 @@ namespace MyKeyChangerForAppleWireless {
             { ScanCode.F, new KeySet(KeySetPair.Caret) },
             { ScanCode.G, new KeySet(KeySetPair.Underscore) },
         };
-
-        // User4([)
+        // User4(shiftR)
         private static Dictionary<byte, KeySet> _convertMappingUser4 = new Dictionary<byte, KeySet> {
-            { ScanCode.Q, new KeySet("だ") },
-            { ScanCode.W, new KeySet("で") },
-            { ScanCode.E, new KeySet("ぶ") },
-            { ScanCode.R, new KeySet("ず") },
-            { ScanCode.T, new KeySet("が") },
-            { ScanCode.Y, new KeySet("げ") },
-            { ScanCode.P, new KeySet("ぜ") },
-
-            { ScanCode.A, new KeySet("ぢ") },
-            { ScanCode.S, new KeySet("ど") },
-            { ScanCode.D, new KeySet("じ") },
-            { ScanCode.F, new KeySet("ば") },
-            { ScanCode.G, new KeySet("ぎ") },
-            { ScanCode.H, new KeySet("ぐ") },
-            { ScanCode.L, new KeySet("べ") },
-            { ScanCode.SemiColon, new KeySet("ぼ") },
-
-            { ScanCode.Z, new KeySet("づ") },
-            { ScanCode.X, new KeySet("ざ") },
-            { ScanCode.C, new KeySet("ぞ") },
-            { ScanCode.V, new KeySet("び") },
-            { ScanCode.B, new KeySet("ご") },
+            { ScanCode.Q,  new KeySet(KeySetPair.TenKeyNum1)},
+            { ScanCode.W,  new KeySet(KeySetPair.TenKeyNum2)},
+            { ScanCode.E,  new KeySet(KeySetPair.TenKeyNum3)},
+            { ScanCode.R,  new KeySet(KeySetPair.TenKeyNum4)},
+            { ScanCode.T,  new KeySet(KeySetPair.TenKeyNum5)},
+            { ScanCode.Y,  new KeySet(KeySetPair.TenKeyNum6)},
+            { ScanCode.U,  new KeySet(KeySetPair.TenKeyNum7)},
+            { ScanCode.I,  new KeySet(KeySetPair.TenKeyNum8)},
+            { ScanCode.O,  new KeySet(KeySetPair.TenKeyNum9)},
+            { ScanCode.P,  new KeySet(KeySetPair.TenKeyNum0)},
         };
 
-        // User5(])
-        private static Dictionary<byte, KeySet> _convertMappingUser5 = new Dictionary<byte, KeySet> {
-            { ScanCode.E, new KeySet("ぷ") },
+        //// User4([)
+        //private static Dictionary<byte, KeySet> _convertMappingUser4 = new Dictionary<byte, KeySet> {
+        //    { ScanCode.Q, new KeySet("だ") },
+        //    { ScanCode.W, new KeySet("で") },
+        //    { ScanCode.E, new KeySet("ぶ") },
+        //    { ScanCode.R, new KeySet("ず") },
+        //    { ScanCode.T, new KeySet("が") },
+        //    { ScanCode.Y, new KeySet("げ") },
+        //    { ScanCode.P, new KeySet("ぜ") },
 
-            { ScanCode.F, new KeySet("ぱ") },
-            { ScanCode.L, new KeySet("ぺ") },
-            { ScanCode.SemiColon, new KeySet("ぽ") },
+            //    { ScanCode.A, new KeySet("ぢ") },
+            //    { ScanCode.S, new KeySet("ど") },
+            //    { ScanCode.D, new KeySet("じ") },
+            //    { ScanCode.F, new KeySet("ば") },
+            //    { ScanCode.G, new KeySet("ぎ") },
+            //    { ScanCode.H, new KeySet("ぐ") },
+            //    { ScanCode.L, new KeySet("べ") },
+            //    { ScanCode.SemiColon, new KeySet("ぼ") },
 
-            { ScanCode.V, new KeySet("ぴ") },
-        };
+            //    { ScanCode.Z, new KeySet("づ") },
+            //    { ScanCode.X, new KeySet("ざ") },
+            //    { ScanCode.C, new KeySet("ぞ") },
+            //    { ScanCode.V, new KeySet("び") },
+            //    { ScanCode.B, new KeySet("ご") },
+            //};
 
-        // single
-        //private static Dictionary<ushort, KeySet> _normalConvert = new Dictionary<ushort, KeySet> {
-//            { ScanCode.F14, new KeySet(KeySetPair.Kana) },
-//            { ScanCode.Underscore, new KeySet(KeySetPair.F16) },
+            //// User5(])
+            //private static Dictionary<byte, KeySet> _convertMappingUser5 = new Dictionary<byte, KeySet> {
+            //    { ScanCode.E, new KeySet("ぷ") },
+
+            //    { ScanCode.F, new KeySet("ぱ") },
+            //    { ScanCode.L, new KeySet("ぺ") },
+            //    { ScanCode.SemiColon, new KeySet("ぽ") },
+
+            //    { ScanCode.V, new KeySet("ぴ") },
+            //};
+
+            // single
+            //private static Dictionary<ushort, KeySet> _normalConvert = new Dictionary<ushort, KeySet> {
+            //            { ScanCode.F14, new KeySet(KeySetPair.Kana) },
+            //            { ScanCode.Underscore, new KeySet(KeySetPair.F16) },
             //{ ScanCode.Colon, new KeySet(KeySetPair.Minus) },
             //{ ScanCode.F13, new KeySet(KeySetPair.Tab) },
             //{ ScanCode.Tab, new KeySet(KeySetPair.Escape) },
             //{ ScanCode.BracketsL, new KeySet(KeySetPair.WinR,Flags.ExtendeKey) },
             //{ ScanCode.BracketsR, new KeySet(KeySetPair.AltL,Flags.ExtendeKey) },
-        //};
+            //};
 
         private static Dictionary<int, Dictionary<byte, KeySet>> _convertMappingList = new Dictionary<int, Dictionary<byte, KeySet>> {
             { ModifiedKey.User1, _convertMappingUser1},
             { ModifiedKey.User2, _convertMappingUser2},
             { ModifiedKey.User3, _convertMappingUser3},
-            //{ ModifiedKey.User4, _convertMappingUser4},
+            { ModifiedKey.User4, _convertMappingUser4},
             //{ ModifiedKey.User5, _convertMappingUser5},
         };
         #endregion

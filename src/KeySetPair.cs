@@ -253,5 +253,6 @@ namespace MyKeyChangerForAppleWireless {
         public static byte Up { get { return KeySetPair.ScanCode(KeySetPair.Up); } }
         public static byte Yen { get { return KeySetPair.ScanCode(KeySetPair.Yen); } }
         public static byte WinR { get { return KeySetPair.ScanCode(KeySetPair.WinR); } }
+        public static byte ShiftR { get { return KeySetPair.ScanCode(KeySetPair.ShiftR); } }
     }
 }
